@@ -5,10 +5,8 @@ function binarySearchArray(array, findValue) {
   let right = array.length - 1;
   let mid = Math.floor((left + right) / 2);
 
-  while (left < right) {
-    if(array[mid] === findValue) {
-      return mid;
-    }
+  while (left <= right) {
+    if(array[mid] === findValue) return mid;
 
     if(array[mid] < findValue) left = mid + 1;
     else right = mid - 1;
@@ -17,3 +15,7 @@ function binarySearchArray(array, findValue) {
   }
   return -1;
 }
+
+console.log('binarySearchArray(linkedList, 2876)', binarySearchArray(array, 2876));
+console.log('binarySearchArray(linkedList, 1)', binarySearchArray(array, 1));
+console.log('binarySearchArray(linkedList, 500)', binarySearchArray(array, 500));

@@ -1,4 +1,4 @@
-import MaxHeap from './MaxHeap';
+import MaxHeap from './heap/MaxHeap';
 
 export { MaxHeap }
 

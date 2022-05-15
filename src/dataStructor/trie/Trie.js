@@ -39,3 +39,11 @@ class Trie {
     return true;
   }
 }
+
+const trie = new Trie();
+trie.insert("cat");
+trie.insert("can");
+
+console.log('find cat', trie.has('cat'));
+console.log('find can', trie.has('can'));
+console.log('find cap', trie.has('cap'));
