@@ -1,3 +1,5 @@
+// Array 로 단순하게 스택 구현 가능
+// Stack > LIFO
 const stack = [];
 
 // push

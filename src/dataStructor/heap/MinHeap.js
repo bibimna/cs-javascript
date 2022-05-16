@@ -1,3 +1,4 @@
+// 최소값이 최상위 루트에 존재하는 Heap
 export default class MinHeap {
   constructor() {
     this.heap = [null]
@@ -44,3 +45,20 @@ export default class MinHeap {
     return returnValue;
   }
 }
+// Heap 요소 추가
+const minHeap = new MinHeap()
+minHeap.push(1);
+minHeap.push(87);
+minHeap.push(22);
+minHeap.push(43);
+minHeap.push(23);
+console.log('heap', minHeap.heap);
+
+// Heap 요소 제거
+const popNodeArr = [];
+popNodeArr.push(minHeap.pop());
+popNodeArr.push(minHeap.pop());
+popNodeArr.push(minHeap.pop());
+popNodeArr.push(minHeap.pop());
+popNodeArr.push(minHeap.pop());
+console.log('pop list', popNodeArr);
