@@ -1,3 +1,6 @@
+/*
+* 이진 탐색 배열로 구현
+*/
 const array = [1, 1, 5, 124, 400, 599, 1004, 2876, 8712];
 
 function binarySearchArray(array, findValue) {

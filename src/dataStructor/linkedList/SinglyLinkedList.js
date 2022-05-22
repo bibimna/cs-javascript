@@ -5,8 +5,7 @@
 * > 각 요소를 노드라고 부르며 데이터 영역과 포인터 영역으로 구성됨
 * > 메모리가 허용하는 한 요소 제한없이 추가 가능
 * > 탐색시 O(n) 시간이 추가로 듬, 단순 요소 추가/제거는 O(1)
-* */
-
+*/
 class Node {
   constructor(value) {
     this.value = value;
@@ -57,7 +56,7 @@ class SinglyLinkedList {
       prevNode = prevNode.next;
     }
 
-    if(prevNode.next !== null) prevNode.next = prevNode.next.next;
+    if(prevNode.next) prevNode.next = prevNode.next.next;
   }
 
   display() {

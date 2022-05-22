@@ -1,3 +1,6 @@
+/*
+* 이진 탐색 트리로 구현
+*/
 class Node {
   constructor(value) {
     this.value = value;
@@ -36,9 +39,6 @@ class BinarySearchTree {
         }
         currentNode = currentNode.left;
       }
-
-
-
     }
   }
 

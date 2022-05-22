@@ -1,5 +1,4 @@
 // 최대값이 최상위 루트 노드에 존재하는 Heap
-
 export default class MaxHeap {
   constructor() {
     this.heap = [null];
