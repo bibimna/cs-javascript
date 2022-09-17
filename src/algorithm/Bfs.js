@@ -54,37 +54,26 @@ function solution(n, edge) {
   return distance.filter(item => item === max).length;
 }
 
-function Bfs(n, graph) {
-  const distance = Array(n+1).fill(0);
-  distance[1] = 1;
-  // BFS
-  const queue = new Queue();
-  queue.enqueue(1);
-  while (!queue.isEmpty()) {
-      const src = queue.dequeue();
-      
-      for(const dest of graph[src]) {
-          if(distance[dest] === 0) {
-              queue.enqueue(dest);
-              distance[dest] = distance[src] + 1;
-          }
-      }
-  }
-  console.log('graph', graph);
-  console.log('distance', distance)
-  return distance.reduce((sum, value) => sum += value);
-}
-
 function solution2(n, queryType, student1, student2) {
   const graph = Array.from(Array(n + 1), () => [])
+  const groupSetList = [];
   const result = [];
+
+  const addGroup = (s1, s2) => {
+    if(!groupSetList.length) groupSetList.push(new Set([s1, s2]));
+    else {
+      //
+      for(let i = 0; i < groupSetList.length; i++) {
+
+      }
+    }
+  }
 
   for(let i = 0; i < queryType.length; i += 1) {
     if(queryType[i] === 't') {
-      result.push(Bfs(n, graph));
+      result.push(groupSetList.length);
     } else {
-      graph[student1[i]].push(student2[i])
-      graph[student2[i]].push(student1[i])
+      addGroup(student1[i], student2[i]);
     }
   }  
   console.log('result', result);
